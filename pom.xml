@@ -74,7 +74,6 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.1.2</version>
         <configuration>
-          <!-- JUnit Platform -->
           <useModulePath>false</useModulePath>
         </configuration>
       </plugin>
@@ -85,15 +84,17 @@
         <artifactId>jacoco-maven-plugin</artifactId>
         <version>${jacoco.version}</version>
         <executions>
-          <!-- inject agent before tests -->
           <execution>
-            <goals><goal>prepare-agent</goal></goals>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
           </execution>
-          <!-- generate report after tests -->
           <execution>
             <id>report</id>
             <phase>test</phase>
-            <goals><goal>report</goal></goals>
+            <goals>
+              <goal>report</goal>
+            </goals>
           </execution>
         </executions>
       </plugin>
@@ -104,11 +105,11 @@
   <distributionManagement>
     <repository>
       <id>nexus-releases</id>
-      <url>http://10.25.157.153:8081/repository/maven-releases/</url>
+      <url>http://61.28.230.202:8081/repository/maven-releases/</url>
     </repository>
     <snapshotRepository>
       <id>nexus-snapshots</id>
-      <url>http://10.25.157.153:8081/repository/maven-snapshots/</url>
+      <url>http://61.28.230.202:8081/repository/maven-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 
